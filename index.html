@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoYouEvenGif</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="/assets/assets/css/main.css">
+</head>
+<body>
+    <div class="container">
+     <nav class="nav-tabs">
+  <div class="tab active" style="background-color: var(--purple);" data-section="homebase">Homebase</div>
+  <div class="tab" style="background-color: var(--aqua);" data-section="loopies">Loopies</div>
+  <div class="tab" style="background-color: var(--orange);" data-section="wiki">Wiki</div>
+  <div class="tab" style="background-color: var(--lime);" data-section="peek">Peek a Pics</div>
+  <div class="tab" style="background-color: var(--pink);" data-section="tunes">Tunes</div>
+  <div class="tab" style="background-color: var(--yellow);" data-section="poke">Poké</div>
+  <div class="tab" style="background-color: var(--navy);" data-section="who">Who Dis?</div>
+</nav>
+ <main class="content-area">
+            <section id="homebase" class="section active">
+                <div class="homebase">
+                    <h1 class="homebase-heading"><span class="coral">WELCOME</span> DoYouEvenGif</h1>
+                    <p class="homebase-subheading">FREE GIF PLAYGROUND — POWERPOINT-SMOOTH WEB EXPERIENCE</p>
+                    <p class="designer-line">DESIGNED FOR FUN ON THE WEB</p>
+                    <div class="dots-row">
+                        <div class="dot" style="background-color: var(--coral);" data-color="coral"></div>
+                        <div class="dot" style="background-color: var(--teal);" data-color="teal"></div>
+                        <div class="dot" style="background-color: var(--gold);" data-color="gold"></div>
+                        <div class="dot" style="background-color: var(--slate);" data-color="slate"></div>
+                        <div class="dot" style="background-color: var(--mint);" data-color="mint"></div>
+                    </div>
+                    <div class="status-bar"></div>
+                    
+                    <button class="get-started-btn">Get Started</button>
+                </div>
+            </section>
+            <section id="loopies" class="section">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search GIFs (cat, meme, wow...)">
+                    <div class="search-icon">🔍</div>
+                </div>
+                <div class="categories">
+                    <button class="category-btn active" data-category="trending">TRENDING</button>
+                    <button class="category-btn" data-category="cats">CATS</button>
+                    <button class="category-btn" data-category="anime">ANIME</button>
+                    <button class="category-btn" data-category="reactions">REACTIONS</button>
+                    <button class="category-btn" data-category="memes">MEMES</button>
+                </div>
+                <div class="gif-grid">
+                    <div class="loading">Loading trending GIFs...</div>
+                </div>
+            </section>
+<section id="wiki" class="section">
+    <div class="gallery-header">
+        <h2 class="gallery-title">Wiki Explorer</h2>
+        <p class="gallery-subtitle">Search and explore Wikipedia articles</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-input" id="wiki-search" placeholder="Search Wikipedia articles...">
+        <button class="search-icon" id="wiki-search-btn">🔍</button>
+    </div>
+    <div class="filters-container">
+        <div class="filter-group">
+            <span class="filter-label">Sort By</span>
+            <select class="filter-select" id="wiki-sort-filter">
+                <option value="relevance">Relevance</option>
+                <option value="last_edited">Last Edited</option>
+                <option value="newest">Newest</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <span class="filter-label">Language</span>
+            <select class="filter-select" id="wiki-language-filter">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="zh">Chinese</option>
+                <option value="ru">Russian</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <span class="filter-label">Results</span>
+            <select class="filter-select" id="wiki-results-filter">
+                <option value="10">10</option>
+                <option value="20" selected>20</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+    </div>
+    <div class="results-info">
+        Showing <span class="results-count" id="wiki-results-count">0</span> results
+    </div>
+    <div class="wiki-results" id="wiki-results">
+        <div class="loading">Search for something to begin...</div>
+    </div>
+    <button class="load-more" id="wiki-load-more" style="display: none;">Load More</button>
+    <div class="search-history" id="wiki-search-history" style="display: none;">
+        <h3>Recent Searches</h3>
+        <div class="history-tags" id="history-tags"></div>
+    </div>
+</section>
+<section id="peek" class="section">
+                <div class="gallery-header">
+                    <h2 class="gallery-title">Peek a Pics</h2>
+                    <p class="gallery-subtitle">Discover stunning royalty-free images from Pixabay's extensive collection</p>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="pixabay-search" placeholder="Search for images (nature, animals, technology...)">
+                    <button class="search-icon" id="pixabay-search-btn">🔍</button>
+                </div>
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <span class="filter-label">Category</span>
+                        <select class="filter-select" id="category-filter">
+                            <option value="">All Categories</option>
+                            <option value="backgrounds">Backgrounds</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="nature">Nature</option>
+                            <option value="science">Science</option>
+                            <option value="education">Education</option>
+                            <option value="feelings">Feelings</option>
+                            <option value="health">Health</option>
+                            <option value="people">People</option>
+                            <option value="religion">Religion</option>
+                            <option value="places">Places</option>
+                            <option value="animals">Animals</option>
+                            <option value="industry">Industry</option>
+                            <option value="computer">Computer</option>
+                            <option value="food">Food</option>
+                            <option value="sports">Sports</option>
+                            <option value="transportation">Transportation</option>
+                            <option value="travel">Travel</option>
+                            <option value="buildings">Buildings</option>
+                            <option value="business">Business</option>
+                            <option value="music">Music</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <span class="filter-label">Image Type</span>
+                        <select class="filter-select" id="type-filter">
+                            <option value="all">All Types</option>
+                            <option value="photo">Photo</option>
+                            <option value="illustration">Illustration</option>
+                            <option value="vector">Vector</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <span class="filter-label">Orientation</span>
+                        <select class="filter-select" id="orientation-filter">
+                            <option value="all">All Orientations</option>
+                            <option value="horizontal">Horizontal</option>
+                            <option value="vertical">Vertical</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <span class="filter-label">Order By</span>
+                        <select class="filter-select" id="order-filter">
+                            <option value="popular">Popular</option>
+                            <option value="latest">Latest</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <span class="filter-label">Safe Search</span>
+                        <select class="filter-select" id="safesearch-filter">
+                            <option value="true">On</option>
+                            <option value="false">Off</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="results-info">
+                    Showing <span class="results-count">0</span> results
+                </div>
+                <div class="gallery-grid" id="pixabay-gallery">
+                    <div class="loading">Loading images from Pixabay...</div>
+                </div>
+                <button class="load-more" id="load-more" style="display: none;">Load More</button>
+            </section>
+<section id="tunes" class="section">
+<div class="gallery-header">
+        <h2 class="gallery-title">Tunes Explorer</h2>
+        <p class="gallery-subtitle">Discover music, audiobooks, and podcasts from iTunes Store</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-input" id="itunes-search" placeholder="Search for songs, artists, albums, podcasts...">
+        <button class="search-icon" id="itunes-search-btn">🔍</button>
+    </div>
+    <div class="filters-container">
+        <div class="filter-group">
+            <span class="filter-label">Media Type</span>
+            <select class="filter-select" id="media-filter">
+                <option value="all">All</option>
+                <option value="music">Music</option>
+                <option value="podcast">Podcasts</option>
+                <option value="audiobook">Audiobooks</option>
+                <option value="musicVideo">Music Videos</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <span class="filter-label">Entity</span>
+            <select class="filter-select" id="entity-filter">
+                <option value="">Auto</option>
+                <option value="song">Songs</option>
+                <option value="album">Albums</option>
+                <option value="musicArtist">Artists</option>
+                <option value="podcastAuthor">Podcast Authors</option>
+                <option value="audiobookAuthor">Audiobook Authors</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <span class="filter-label">Country</span>
+            <select class="filter-select" id="country-filter">
+                <option value="US">United States</option>
+                <option value="GB">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="JP">Japan</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <span class="filter-label">Results</span>
+            <select class="filter-select" id="results-filter">
+                <option value="25">25</option>
+                <option value="50" selected>50</option>
+                <option value="100">100</option>
+            </select>
+        </div>
+    </div>
+<div class="results-info">
+        Showing <span class="results-count">30</span> results
+    </div>
+    <div class="tunes-grid" id="tunes-grid">
+        <div class="loading">Loading trending music...</div>
+    </div>
+    <button class="load-more" id="load-more-tunes" style="display: none;">Load More</button>
+</section>
+<section id="poke" class="section">
+    <div class="gallery-header">
+        <h2 class="gallery-title">Pokédex Explorer</h2>
+        <p class="gallery-subtitle">Discover everything about your favorite Pokémon</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-input" id="pokemon-search" placeholder="Enter Pokémon name or ID (e.g., Pikachu or 25)">
+        <button class="search-icon" id="pokemon-search-btn">🔍</button>
+    </div>
+    <div class="filters-container">
+        <div class="filter-group">
+            <span class="filter-label">Sort By</span>
+            <select class="filter-select" id="sort-filter">
+                <option value="id">Pokédex Number</option>
+                <option value="name">Name</option>
+                <option value="type">Type</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <span class="filter-label">Type</span>
+            <select class="filter-select" id="type-filter">
+                <option value="">All Types</option>
+                <option value="normal">Normal</option>
+                <option value="fire">Fire</option>
+                <option value="water">Water</option>
+                <option value="electric">Electric</option>
+                <option value="grass">Grass</option>
+                <option value="ice">Ice</option>
+                <option value="fighting">Fighting</option>
+                <option value="poison">Poison</option>
+                <option value="ground">Ground</option>
+                <option value="flying">Flying</option>
+                <option value="psychic">Psychic</option>
+                <option value="bug">Bug</option>
+                <option value="rock">Rock</option>
+                <option value="ghost">Ghost</option>
+                <option value="dragon">Dragon</option>
+                <option value="dark">Dark</option>
+                <option value="steel">Steel</option>
+                <option value="fairy">Fairy</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <span class="filter-label">Generation</span>
+            <select class="filter-select" id="generation-filter">
+                <option value="">All Generations</option>
+                <option value="1">Generation I</option>
+                <option value="2">Generation II</option>
+                <option value="3">Generation III</option>
+                <option value="4">Generation IV</option>
+                <option value="5">Generation V</option>
+                <option value="6">Generation VI</option>
+                <option value="7">Generation VII</option>
+                <option value="8">Generation VIII</option>
+            </select>
+        </div>
+    </div>
+    <div class="results-info">
+        Showing information for <span class="results-count" id="pokemon-name">Pokémon</span>
+    </div>
+    <div class="pokemon-container" id="pokemon-container">
+        <div class="loading">Search for a Pokémon to begin...</div>
+    </div>
+    <div class="quiz-section" id="quiz-section" style="display: none;">
+        <div class="gallery-header">
+            <h2 class="gallery-title">Pokémon Quiz</h2>
+            <p class="gallery-subtitle">Test your Pokémon knowledge!</p>
+        </div>
+        <div class="quiz-container" id="quiz-container">
+            <div class="quiz-question" id="quiz-question">
+                <h3>Which type is super effective against Water-type Pokémon?</h3>
+            </div>
+            
+            <div class="quiz-options" id="quiz-options">
+                <button class="quiz-option">Fire</button>
+                <button class="quiz-option">Electric</button>
+                <button class="quiz-option">Grass</button>
+                <button class="quiz-option">Ground</button>
+            </div>
+            <div class="quiz-feedback" id="quiz-feedback"></div>
+            
+            <button class="load-more" id="next-question" style="display: none;">Next Question</button>
+        </div>
+    </div>
+</section>
+            <section id="who" class="section">
+                <div class="who-dis">
+                    <div class="profile-header">
+                        <h2 class="profile-title">Who Dis?</h2>
+                        <p class="profile-subtitle">Just me, Frutti - the creative mind behind DoYouEvenGif</p>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-card">
+                            <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Frutti" class="profile-image">
+                            <h3 class="profile-name">Frutti</h3>
+                            <p class="profile-role">Creator & GIF Enthusiast</p>
+                            <p class="profile-bio">
+                                I'm the one-person team behind DoYouEvenGif. I created this platform to share my passion for 
+                                animated expressions and bring joy to people through the magic of GIFs. When I'm not coding or 
+                                designing, you'll find me exploring new animation techniques or playing with my cats.
+                            </p>
+                             <div class="profile-stats">
+                                <div class="stat">
+                                    <div class="stat-number">5+</div>
+                                    <div class="stat-label">Years Creating</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number">10K+</div>
+                                    <div class="stat-label">GIFs Made</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number">100%</div>
+                                    <div class="stat-label">Passion</div>
+                                </div>
+                            </div>
+                            <div class="profile-social">
+                                <a href="#" class="social-link">📱</a>
+                                <a href="#" class="social-link">💻</a>
+                                <a href="#" class="social-link">📸</a>
+                                <a href="#" class="social-link">🎥</a>
+                            </div>
+                        </div>
+                        <div class="skills-section">
+                            <h3 class="skills-title">My Skills</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-icon">🎨</div>
+                                    <h4 class="skill-name">Design</h4>
+                                    <p class="skill-desc">Creating visually appealing and intuitive interfaces</p>
+                                </div>
+                              <div class="skill-item">
+                                    <div class="skill-icon">💻</div>
+                                    <h4 class="skill-name">Development</h4>
+                                    <p class="skill-desc">Building smooth, functional web experiences</p>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">✨</div>
+                                    <h4 class="skill-name">Animation</h4>
+                                    <p class="skill-desc">Crafting engaging motion and transitions</p>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">😺</div>
+                                    <h4 class="skill-name">Cat Whispering</h4>
+                                    <p class="skill-desc">Expert level in feline communication</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image" id="lightbox-image">
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+            <button class="lightbox-close" id="lightbox-close">✕</button>
+            <div class="lightbox-nav">
+                <button class="lightbox-btn lightbox-prev" id="lightbox-prev">←</button>
+                <button class="lightbox-btn lightbox-next" id="lightbox-next">→</button>
+            </div>
+        </div>
+    </div>
+    <div class="toast" id="toast">Link copied!</div>
+<script src="/assets/assets/js/main.js"></script>
+</body>
+</html>
