@@ -1591,10 +1591,14 @@
         }
 
         .profile-social {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 12px;
+           .profile-social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
         }
 
         .social-link {
@@ -1779,3 +1783,4 @@
             }
 
         }
+
