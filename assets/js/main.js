@@ -1637,3 +1637,61 @@ document.addEventListener("visibilitychange", function () {
     document.title = originalTitle;
   }
 });
+
+function detectDevice() {
+      const ua = navigator.userAgent.toLowerCase();
+      const warning = document.getElementById("device-warning");
+      const box = document.getElementById("warning-box");
+      const warningText = document.getElementById("warning-text");
+      const warningImg = document.getElementById("warning-img");
+
+      let device = "desktop";
+
+      if (/android|iphone|ipod/i.test(ua)) {
+        device = "mobile";
+      } else if (/ipad|tablet/i.test(ua)) {
+        device = "tablet";
+      }
+
+      if (device !== "desktop") {
+        // Set text
+        warningText.textContent =
+          device === "mobile"
+            ? "You’re on a mobile device. Please check ‘Desktop site’ or switch to a PC."
+            : "You’re on a tablet. Please check ‘Desktop site’ or switch to a PC.";
+
+        // Show background and popup
+        warning.classList.add("show");
+        setTimeout(() => box.classList.add("show"), 50); // slide + zoom
+
+        // Staggered animation: show text then image
+        setTimeout(() => warningText.classList.add("show"), 200);
+        setTimeout(() => warningImg.classList.add("show"), 400);
+
+        // Auto close after 5s
+        setTimeout(() => closeWarning(), 5000);
+      }
+    }
+
+    function closeWarning() {
+      const warning = document.getElementById("device-warning");
+      const box = document.getElementById("warning-box");
+      const warningText = document.getElementById("warning-text");
+      const warningImg = document.getElementById("warning-img");
+
+      // Remove text and image animations
+      warningText.classList.remove("show");
+      warningImg.classList.remove("show");
+
+      // Trigger slide-up + zoom-out
+      box.classList.remove("show");
+      box.classList.add("hide");
+
+      // Fade out background
+      setTimeout(() => {
+        warning.classList.remove("show");
+        box.classList.remove("hide");
+      }, 400);
+    }
+
+    detectDevice();
