@@ -1592,12 +1592,20 @@
 
         .profile-social {
            .profile-social a {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+              width: 40px;
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+       }
+          
+      .profile-social img,
+       .profile-social svg {
+         width: 36px;   
+         height: 36px;
+        object-fit: contain; 
+      }
+
 
         }
 
@@ -1783,4 +1791,12 @@
             }
 
         }
+
+@media (max-width: 600px) {
+  .profile-social img,
+  .profile-social svg {
+    width: 28px;
+    height: 28px;
+  }
+}
 
