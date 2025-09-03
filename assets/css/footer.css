@@ -1,0 +1,83 @@
+ :root {
+            --berry-burst: hsl(330, 100%, 70%);
+            --melon-mist: hsl(100, 70%, 65%);
+            --citrus-splash: hsl(45, 100%, 65%);
+            --grape-glow: hsl(270, 70%, 65%);
+            --peach-puff: hsl(20, 100%, 85%);
+            --kiwi-kiss: hsl(120, 60%, 60%);
+            --blueberry-breeze: hsl(240, 70%, 70%);
+            --strawberry-sunset: hsl(355, 90%, 70%);
+            --pineapple-punch: hsl(50, 100%, 60%);
+            --plum-paradise: hsl(290, 60%, 65%);
+            --mango-magic: hsl(35, 100%, 65%);
+            --apple-aqua: hsl(170, 70%, 65%);
+            --raspberry-rain: hsl(340, 80%, 70%);
+            --lime-love: hsl(80, 80%, 60%);
+            --coconut-cream: hsl(45, 100%, 95%);
+            --cherry-charm: hsl(350, 80%, 65%);
+            --lemon-light: hsl(60, 100%, 85%);
+            --fig-frost: hsl(280, 60%, 70%);
+            --guava-gleam: hsl(10, 90%, 70%);
+            --midnight-plum: hsl(275, 65%, 30%);
+            --shadow-violet: hsl(280, 40%, 22%);
+            --mystic-emerald: hsl(160, 35%, 25%);
+            --gilded-amber: hsl(48, 50%, 35%);
+            --moonlight-ash: hsl(260, 15%, 18%);
+            --sidebar-width: 300px;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --text-glow: 0 0 10px rgba(255, 255, 255, 0.6);
+            --fruit-shadow: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+        }
+
+footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            font-size: 1.2rem;
+            color: #5a2d8a;
+            border-top: 3px solid var(--berry-burst);
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 30px 30px 0 0;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        ::-webkit-scrollbar {
+            width: 14px;
+            background-color: var(--peach-puff);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, 
+                var(--strawberry-sunset), 
+                var(--berry-burst), 
+                var(--grape-glow)
+            );
+            border-radius: 10px;
+            border: 3px solid var(--coconut-cream);
+            box-shadow: 
+                0 0 10px rgba(255, 182, 193, 0.7),
+                inset 0 0 15px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, 
+                var(--raspberry-rain), 
+                var(--cherry-charm), 
+                var(--guava-gleam)
+            );
+            transform: scale(1.05);
+            box-shadow: 
+                0 0 15px rgba(255, 154, 162, 0.9),
+                inset 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--peach-puff);
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(255, 192, 203, 0.4);
+        }
+
