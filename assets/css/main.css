@@ -1799,3 +1799,94 @@
     height: 28px;
   }
 }
+
+/* Blur background */
+    #device-warning {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    #device-warning.show {
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    /* Modal box */
+    .warning-box {
+      position: relative;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px 24px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 320px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      font-family: Arial, sans-serif;
+
+      opacity: 0;
+      transform: translateY(-40px) scale(0.95);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    /* Slide down + zoom in */
+    .warning-box.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Slide up + zoom out */
+    .warning-box.hide {
+      opacity: 0;
+      transform: translateY(-40px) scale(0.95);
+    }
+
+    .warning-box h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .warning-box h2.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .warning-box img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 10px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .warning-box img.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .close-btn:hover {
+      color: red;
+    }
