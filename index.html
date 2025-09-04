@@ -387,11 +387,24 @@
         </div>
     </div>
     <div class="toast" id="toast">Link copied!</div>
+        
+fetch("/.netlify/functions/getData")
+  .then(res => res.json())
+  .then(data => {
+    console.log("Giphy:", data.giphy);
+    console.log("Pixabay:", data.pixabay);
+
+   
+    const img = document.createElement("img");
+    img.src = data.pixabay.hits[0].webformatURL;
+    document.body.appendChild(img);
+  });
 <script src="assets/js/main.js"></script>
 <script src="assets/js/mobile-tablet-blk.js"></script>
     </div>
 </body>
 </html>
+
 
 
 
