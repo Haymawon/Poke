@@ -1,4 +1,11 @@
-        // Pixabay API state
+fetch("/.netlify/functions/getData")
+  .then(res => res.json())
+  .then(data => {
+    console.log("Giphy Data:", data.giphy);
+    console.log("Pixabay Data:", data.pixabay);
+  });
+       
+// Pixabay API state
         let currentPage = 1;
         let currentQuery = '';
         let currentFilters = {
@@ -1691,4 +1698,5 @@ function detectDevice() {
     }
 
     detectDevice();
+
 
