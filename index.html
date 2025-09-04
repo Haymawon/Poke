@@ -387,7 +387,7 @@
         </div>
     </div>
     <div class="toast" id="toast">Link copied!</div>
-        
+<script>        
 fetch("/.netlify/functions/getData")
   .then(res => res.json())
   .then(data => {
@@ -399,11 +399,13 @@ fetch("/.netlify/functions/getData")
     img.src = data.pixabay.hits[0].webformatURL;
     document.body.appendChild(img);
   });
+    </script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/mobile-tablet-blk.js"></script>
     </div>
 </body>
 </html>
+
 
 
 
