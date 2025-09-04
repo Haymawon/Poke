@@ -1,7 +1,3 @@
- // API Keys
-        const GIPHY_API_KEY = '3ByapV6nZ5g1gTIiIOMAApoZaAUjWe28';
-        const PIXABAY_API_KEY = '52093500-d72d8c42900d684f42f8a70a0';
-        
         // Pixabay API state
         let currentPage = 1;
         let currentQuery = '';
@@ -1695,3 +1691,4 @@ function detectDevice() {
     }
 
     detectDevice();
+
