@@ -24,13 +24,11 @@
 body {
     font-family: 'Open Sans', sans-serif;
     color: var(--off-white);
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(102, 51, 153, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-        linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-    line-height: 1.6;
-    min-height: 100vh;
+   background:
+    repeating-radial-gradient(circle, rgba(150, 60, 255, 0.15) 0, rgba(150, 60, 255, 0.15) 1px, transparent 3px),
+    linear-gradient(120deg, #0a0514 0%, #150a25 50%, #1e0e33 100%);
+background-size: cover;
+background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2484,5 +2482,6 @@ audio::-webkit-media-controls-time-remaining-display {
     color: red;
     background: rgba(255, 0, 0, 0.1);
 }
+
 
 
