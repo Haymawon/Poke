@@ -1,0 +1,59 @@
+/* Social Links Row */
+.social-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+}
+
+/* Base Transparent Button */
+.social-link {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.04);  /* transparent glass */
+  border: 1px solid rgba(160, 80, 255, 0.18); 
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: 
+      transform .28s cubic-bezier(.3, .7, .4, 1),
+      box-shadow .32s ease,
+      background .32s ease,
+      border .3s ease;
+}
+
+/* Icon */
+.social-icon {
+  font-size: 20px;
+  color: #ffffff;
+  opacity: 0.9;
+  transition: opacity .3s ease, transform .28s ease;
+}
+
+/* Hover Effect */
+.social-link:hover {
+  transform: translateY(-3px);
+  background: rgba(160, 80, 255, 0.18);
+  border-color: rgba(190, 120, 255, 0.55);
+  box-shadow: 0 8px 24px rgba(150, 60, 255, 0.35);
+}
+
+.social-link:hover .social-icon {
+  opacity: 1;
+  transform: scale(1.16);
+}
+
+
+/* --- Platform Colors Only for ICON Glow (not background) --- */
+.social-link.telegram:hover .social-icon { color: #2AABEE; }
+.social-link.instagram:hover .social-icon { color: #E1306C; }
+.social-link.x:hover .social-icon { color: #ffffff; }
+.social-link.github:hover .social-icon { color: #cfcfcf; }
