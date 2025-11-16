@@ -134,27 +134,28 @@ h1, h2, h3, h4, h5, h6 {
 
 @font-face {
     font-family: "head";
-    src: url("assets/fonts/ValentineCute.woff2") format("woff2"),
-         url("assets/fonts/ValentineCute.woff") format("woff");
+    src: url("../fonts/ValentineCute.woff2") format("woff2"),
+         url("../fonts/ValentineCute.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "sub-head";
-    src: url("assets/fonts/TooFreakinCuteDemo.woff2") format("woff2"),
-         url("assets/fonts/TooFreakinCuteDemo.woff") format("woff");
+    src: url("../fonts/TooFreakinCuteDemo.woff2") format("woff2"),
+         url("../fonts/TooFreakinCuteDemo.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "poke";
-    src: url("assets/fonts/LMSPokeDex.woff2") format("woff2"),
-         url("assets/fonts/LMSPokeDex.woff") format("woff");
+    src: url("../fonts/LMSPokeDex.woff2") format("woff2"),
+         url("../fonts/LMSPokeDex.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
+
 
 /* Homebase Section */
 .homebase {
@@ -2483,4 +2484,5 @@ audio::-webkit-media-controls-time-remaining-display {
     color: red;
     background: rgba(255, 0, 0, 0.1);
 }
+
 
