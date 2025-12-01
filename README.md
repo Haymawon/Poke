@@ -72,9 +72,9 @@ There is no backend server in this repository. The site's functionality depends 
 ```bash
 Poke/
 ├── assets/          # Images, icons, and other static files
-├── index.html       # The one and only HTML page
 ├── LICENSE
-└── README.md
+├── README.md
+└── index.html       # The one and only HTML page
 ```
 # About
 
