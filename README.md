@@ -73,8 +73,6 @@ There is no backend server in this repository. The site's functionality depends 
 Poke/
 ├── assets/          # Images, icons, and other static files
 ├── index.html       # The one and only HTML page
-├── style.css        # All the styles
-├── script.js        # All the interactive logic
 ├── LICENSE
 └── README.md
 ```
