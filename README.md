@@ -39,6 +39,9 @@ This is a static site. No build tools, package managers, or servers are needed.
      git clone https://github.com/Haymawon/Poke.git
      cd Poke
 ```
+
+
+
 2. Run it
    Simply open the index.html file in your web browser.
 · You can double-click it. 
