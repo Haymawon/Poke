@@ -84,6 +84,9 @@ This is a personal project for fun and experimentation.
 
 ## License
 
-[LICENSE](https://github.com/Haymawon/Poke?tab=License-1-ov-file#)
+All Rights Reserved.
+
+This source code is the property of [Haymawon].
+Unauthorized copying, modification, distribution, or use of this code, via any medium, is strictly prohibited.
 
 
